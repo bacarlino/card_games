@@ -27,7 +27,7 @@ class CardScene(Scene):
     def create_sprites(self):
         self.deck.sprite = SpriteNode('card:BackBlue4', scale=0.4)
         for card in self.deck.deck:
-            card.sprite = SpriteNode('card:{}{}'.format(card._suit, card._rank), scale=0.4)
+            card.sprite = SpriteNode('card:{}{}'.format(card.suit, card.rank), scale=0.4)
   
     def show_deck(self):
         pos = (50, self.size.h - 100)

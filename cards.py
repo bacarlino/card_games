@@ -5,15 +5,15 @@ class Card:
     '''A single playing card'''
     
     def __init__(self, suit, rank, value):
-        self._suit = suit
-        self._rank = rank
-        self._value = value
+        self.suit = suit
+        self.rank = rank
+        self.value = value
     
     def __str__(self):
-        return '{} of {}'.format(self._rank, self._suit)
+        return '{} of {}'.format(self.rank, self.suit)
         
     def __repr__(self):
-        return 'Card({}, {})'.format(self._suit, self._rank)
+        return 'Card({}, {})'.format(self.suit, self.rank)
         
 
 

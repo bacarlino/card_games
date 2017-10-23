@@ -9,7 +9,8 @@ class SolitaireScene(CardScene):
         
 
 class WorkingPile:
-    pass
+    def __init__(self):
+        pass
     
 
 class SortedPile:
@@ -20,13 +21,14 @@ class SortedPile:
     def add_card(self, card):
         if not self.cards and card.value == 1:
             self.cards.append(card)
-        else:
+        elif self.cards:
             comp_card = self.cards[-1]
-            if card.suit == comp_card.suit and card.rank == comp_card.rank + 1:
+            if card.suit == comp_card.suit and card.value == comp_card.value + 1:
                 self.cards.append(card)
         
-    
-run(SolitaireScene())
+        
+if __name__ == "__main__":
+    run(SolitaireScene())
 
 
 '''
